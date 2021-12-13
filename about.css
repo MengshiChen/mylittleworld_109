@@ -1,0 +1,52 @@
+body {
+  background-color: #A2DCF2;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color:#908DF2;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 18px;
+  font-size: 30px;
+  background-color: none;
+  color: #908DF2;
+}
+
+h2{
+  text-align: left;
+  font-size: 30px;
+ font-family: 'Architects Daughter', cursive;
+  color:pink;
+}
+.description{
+  margin: auto;
+width: 60%;
+border: 5px solid #72C1F2;
+padding: 10px;
+}
+p{
+text-align: left;
+font-size: 18px;
+font-family: 'Architects Daughter', cursive;
+color:#D9704A;
+}
+
+p a{
+  color:#908DF2;
+}
+.title{
+  margin: auto;
+ width: 60%;
+/* border: 5px solid #FFFF00; */
+ padding: 10px;
+
+}
