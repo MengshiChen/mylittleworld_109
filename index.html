@@ -60,12 +60,23 @@
 		import {
 			Water
 		} from './public/src/water.js';
+
+		// import {
+		// 	AudioListener
+		// } from './public/src/AudioListener.js';
+		//
+		// import {
+		// 	AudioLoader
+		// } from './public/src/AudioLoader.js';
+
 		let camera, scene, renderer, controls;
 		let water, mesh, container, stats;
 
 		const objects = [];
 
 		let raycaster;
+
+
 
 		let moveForward = false;
 		let moveBackward = false;
@@ -82,10 +93,27 @@
 		init();
 		animate();
 
+		// // create an AudioListener and add it to the camera
+		// const listener = new THREE.AudioListener();
+		// camera.add( listener );
+		//
+		// // create a global audio source
+		// const sound = new THREE.Audio( listener );
+		//
+		// // load a sound and set it as the Audio object's buffer
+		// const audioLoader = new THREE.AudioLoader();
+		// audioLoader.load( './assets/music.mp3', function( buffer ) {
+		// 	sound.setBuffer( buffer );
+		// 	sound.setLoop( true );
+		// 	sound.setVolume( 1);
+		// 	sound.play();
+		// });
+
 		function init() {
 
-			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
-			camera.position.y = 100;
+			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+			camera.position.x = 150;
+			camera.position.y = 50;
 
 			scene = new THREE.Scene();
 			scene.background = new THREE.Color("#368DD9");
