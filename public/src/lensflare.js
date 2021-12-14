@@ -15,7 +15,7 @@ import {
 	Vector2,
 	Vector3,
 	Vector4
-} from '/public/build/three.module.js';
+} from 'https://mengshichen.github.io/mylittleworld_109/public/build/three.module.js';
 
 class Lensflare extends Mesh {
 
