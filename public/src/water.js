@@ -14,7 +14,7 @@ import {
 	Vector3,
 	Vector4,
 	WebGLRenderTarget
-} from '/public/build/three.module.js';
+} from './public/build/three.module.js';
 /**
  * Work based on :
  * http://slayvin.net : Flat mirror for three.js
