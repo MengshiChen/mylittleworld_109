@@ -111,15 +111,15 @@
 
 		function init() {
 
-			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+			camera = new THREE.PerspectiveCamera(95, window.innerWidth / window.innerHeight, 1, 1000);
 			camera.position.x = 150;
 			camera.position.y = 50;
 
 			scene = new THREE.Scene();
 			scene.background = new THREE.Color("#368DD9");
-			scene.fog = new THREE.Fog("#72C1F2", 30, 270);
+			scene.fog = new THREE.Fog("#70D3FF", 10, 300);
 
-			const light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.75);
+			const light = new THREE.HemisphereLight('#BFF5FF', 0x777788, 0.75);
 			light.position.set(0.5, 1, 0.75);
 			scene.add(light);
 
@@ -175,7 +175,7 @@
 						break;
 
 					case 'Space':
-						if (canJump === true) velocity.y += 350;
+						if (canJump === true) velocity.y += 450;
 						canJump = false;
 						break;
 
@@ -214,7 +214,7 @@
 			document.addEventListener('keydown', onKeyDown);
 			document.addEventListener('keyup', onKeyUp);
 
-			raycaster = new THREE.Raycaster(new THREE.Vector3(), new THREE.Vector3(0, -1, 0), 0, 10);
+			raycaster = new THREE.Raycaster(new THREE.Vector3(), new THREE.Vector3(2, 2, 2), 10, 10);
 
 
 			//
@@ -251,7 +251,7 @@
 			if (controls.isLocked === true) {
 
 				raycaster.ray.origin.copy(controls.getObject().position);
-				raycaster.ray.origin.y -= 10;
+				raycaster.ray.origin.y -= 20;
 
 				const intersections = raycaster.intersectObjects(objects);
 
@@ -350,7 +350,7 @@
 				const model = gltf.scene;
 
 				model.position.set(-310, -3, 20);
-				model.scale.set(500, 500, 500);
+				model.scale.set(600, 600, 600);
 
 			});
 
@@ -399,8 +399,8 @@
 
 				const model = gltf.scene;
 
-				model.position.set(-10, 0, 30);
-				model.scale.set(2500, 2500, 2500);
+				model.position.set(-50, 0, 20);
+				model.scale.set(3000, 3000, 3000);
 
 
 			});
